@@ -3,15 +3,7 @@
 // to read or write data, they have to go through this service.
 
 import { db } from "../firebaseConfig"
-import {
-  collection,
-  query,
-  getDocs,
-  addDoc,
-  orderBy,
-  limit,
-  Timestamp,
-} from "firebase/firestore"
+import { collection, query, getDocs, addDoc, orderBy, limit, Timestamp } from "firebase/firestore"
 
 export async function createArticle({ title, body }) {
   const data = { title, body, date: Timestamp.now() }
@@ -20,7 +12,7 @@ export async function createArticle({ title, body }) {
 }
 
 // NOT FINISHED: This only gets the first 20 articles. In a real app,
-// you would implement pagination.
+// you implement pagination.
 export async function fetchArticles() {
   const snapshot = await getDocs(
     query(collection(db, "articles"), orderBy("date", "desc"), limit(20))

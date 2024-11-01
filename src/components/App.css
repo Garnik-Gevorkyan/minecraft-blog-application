@@ -1,6 +1,18 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Minecraft-font', sans-serif;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Slightly smaller font for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* Smaller font for mobile */
+    }
 }
 
 .App {
@@ -11,20 +23,31 @@ body {
   overflow: scroll;
 }
 
+@font-face {
+    font-family: 'Minecraft-font';
+    src: url('/minecraft-font/MinecraftRegular-Bmg3.otf') format('woff2'),
+         url('/fonts/your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: rgb(9, 175, 36);
+  color: rgb(255, 255, 255);
   grid-column: 1 / span 2;
-  padding: 10px 5px;
+  padding: 20px 5px;
 }
 
 form {
   padding: 10px;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: flex-start;
+  background-color: skyblue;
 }
 
 form input,
@@ -37,10 +60,28 @@ nav,
 article {
   height: 100%;
   padding: 10px;
+  background-color: rgb(192, 162, 125);
+  background: repeating-linear-gradient(
+        0deg,
+        rgb(180, 140, 92),
+        rgb(203, 158, 80) 15px,
+        #9c7738 15px,
+        rgba(192, 162, 125) 10px,
+        #b59764 20px
+    );
+    background-size: 30px 30px; /* Creates a grid-like pattern */
 }
 
 nav {
-  background-color: #dee9ff;
+  background-color: rgba(148, 88, 5, 0.87);
+  background: repeating-linear-gradient(
+        10deg,
+        rgba(148, 88, 5, 0.87),
+        #755319 10px,
+        #92620f 15px,
+        #8d692c 20px
+    );
+    background-size: 20px 20px; /* Creates a grid-like pattern */
 }
 
 nav p:hover {
