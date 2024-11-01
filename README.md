@@ -9,3 +9,5 @@ It works entirely within my firebase database so everything added will be stored
 Nonetheless i will continue to add features to this, making it have newer features for all weary travelers.
 
 This was made by Garnik Gevorkyan.
+
+The link to where it is deployed is http://localhost:5173/
